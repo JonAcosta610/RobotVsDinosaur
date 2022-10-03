@@ -18,8 +18,9 @@ class Battlefield:
         print(f"And in the blue corner, hailing from Jurassic Park, we have {self.dinosaur.name}!")
 
     def battle_phase(self):
-        self.dinosaur.attack_robot(self.robot)
-        self.robot.attack_dinosaur(self.dinosaur)
+        while self.dinosaur.health_points >= 0 and self.robot.health_points >= 0:
+            self.dinosaur.attack_robot(self.robot)
+            self.robot.attack_dinosaur(self.dinosaur)
 
     def display_winner(self):
         pass
