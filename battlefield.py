@@ -23,4 +23,7 @@ class Battlefield:
             self.robot.attack_dinosaur(self.dinosaur)
 
     def display_winner(self):
-        pass
+        if dinosaur.health_points > robot.health_points:
+            print(f"\n{self.robot.name} has been destroyed!\nThe winner is {self.dinosaur.name}!")
+        else:
+            print(f"\n{self.dinosaur.name} has been destroyed!\nThe winner is {self.robot.name}!")
