@@ -8,7 +8,5 @@ class Robot:
         self.active_weapon = Weapon("Biggoron's Sword", 20)
 
     def attack_dinosaur(self, dinosaur):
-        dinosaur.health_points -= Weapon.attack_power
-        print(f"\n{self.name} attacked {dinosaur.name} with {self.weapon.name} for {self.weapon.attack_power} damage!\n{dinosaur.name}'s HP is now {dinosaur.health_points}")
-        if dinosaur.health_points <= 0:
-            print(f"\n{dinosaur.name} has been destroyed!\nThe winner is {self.name}!")
+        dinosaur.health_points -= self.active_weapon.attack_power
+        print(f"\n{self.name} attacked {dinosaur.name} with {self.active_weapon.name} for {self.active_weapon.attack_power} damage!\n{dinosaur.name}'s HP is now {dinosaur.health_points}")

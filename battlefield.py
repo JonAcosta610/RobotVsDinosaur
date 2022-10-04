@@ -18,12 +18,12 @@ class Battlefield:
         print(f"And in the blue corner, hailing from Jurassic Park, we have {self.dinosaur.name}!")
 
     def battle_phase(self):
-        while self.dinosaur.health_points >= 0 and self.robot.health_points >= 0:
+        while self.robot.health_points > 0:
             self.dinosaur.attack_robot(self.robot)
             self.robot.attack_dinosaur(self.dinosaur)
 
     def display_winner(self):
-        if dinosaur.health_points > robot.health_points:
+        if self.dinosaur.health_points > self.robot.health_points:
             print(f"\n{self.robot.name} has been destroyed!\nThe winner is {self.dinosaur.name}!")
         else:
             print(f"\n{self.dinosaur.name} has been destroyed!\nThe winner is {self.robot.name}!")
